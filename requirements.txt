@@ -326,3 +326,4 @@ yfinance==0.2.51
 youtube-dl==2020.12.2
 zipp==3.23.0
 zope.event==5.0
+
