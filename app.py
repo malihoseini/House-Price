@@ -25,7 +25,7 @@ address_arr = ['Abazar', 'Abbasabad','Absard','Abuzar','Afsarieh','Ahang','Air f
                                                     'Telecommunication','Tenant','Thirteen November','Vahidieh','Vahidiyeh','Valiasr','Vanak','Varamin - Beheshti',
                                                     'Velenjak','Villa','Water Organization','Waterfall','West Ferdows Boulevard','West Pars','Yaftabad','Yakhchiabad',
                                                     'Yousef Abad','Zafar','Zaferanieh','Zargandeh','Zibadasht']
-model = joblib.load('/housePrice.joblib')
+model = joblib.load('housePrice.joblib')
 Area = st.number_input('Input Area', 0, 1000)
 Rooms = st.slider('Choose Number of Rooms', 0, 4)
 Parking = st.select_slider('Do you have Parking?', [False, True])
@@ -46,4 +46,5 @@ def predict():
     prediction = model.predict(X)
     st.write(prediction)
 trigger = st.button('predict', on_click=predict)
+
 
